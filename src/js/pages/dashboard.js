@@ -96,6 +96,7 @@ const Dashboard = {
     return `
     <div  class="col-sm-6 col-md-4 col-lg-3">
     <div class="card h-100">
+      <img src="${listRecord.photoUrl}" class="card-img-top" alt="${listRecord.name}">
       <div class="card-body">
         <h5 class="card-title">${listRecord.name}</h5>
         <h6 class="card-subtitle mb-2 text-muted">${formattedDate}</h6>
