@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title><%= htmlWebpackPlugin.options.title %> | Money Tracker App</title>
   </head>
   <body>
@@ -10,7 +12,7 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-primary">
         <div class="container">
           <span class="navbar-brand"><%= brandName %></span>
-
+      
           <button
             class="navbar-toggler"
             type="button"
@@ -22,10 +24,13 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent"><%= navLinks %></div>
+      
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <%= navLinks %>
+          </div>
         </div>
       </nav>
+      
     </header>
 
     <main>
@@ -78,10 +83,8 @@
                 <i class="bi bi-plus-lg me-1"></i>Tambah Transaksi
               </a>
             </div>
-            <div class="container text-center">
-              <div >
-                <div id="recordsTable"></div>
-              </div>
+            <div  class="container">
+              <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4" id="recordsTable"></div>
             </div>
 
             <!-- <div class="row mt-3">
