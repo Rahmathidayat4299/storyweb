@@ -95,20 +95,20 @@ const Dashboard = {
 
     return `
     <div  class="col-sm-6 col-md-4 col-lg-3">
-    <div class="card h-100">
+    <div class="card h-100 shadow">
       <img src="${listRecord.photoUrl}" class="card-img-top" alt="${listRecord.name}">
       <div class="card-body">
         <h5 class="card-title">${listRecord.name}</h5>
         <h6 class="card-subtitle mb-2 text-muted">${formattedDate}</h6>
         <p class="card-text">${listRecord.description}</p>
       </div>
-      <div class="card-footer d-flex justify-content-end">
+      <div class="card-footer d-flex flex-column flex-sm-row gap-2 justify-center">
         <a class="btn btn-primary" href="#" 
            data-bs-toggle="modal" data-bs-target="#recordDetailModal" 
            data-record-id="${listRecord.id}">
           <i class="bi bi-eye-fill me-1"></i>Show
         </a>
-        <a class="btn btn-warning" href="/list/edit.html?id=${listRecord.id}">
+        <a class="btn btn-warning" href="transactions/edit.html?id=${listRecord.id}">
           <i class="bi bi-pen-fill me-1"></i>Edit
         </a>
         <a class="btn btn-danger" href="#">
