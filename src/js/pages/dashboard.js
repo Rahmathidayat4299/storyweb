@@ -5,9 +5,7 @@ const Dashboard = {
   },
 
   async _initialData() {
-    const fetchRecords = await fetch(
-      'https://raw.githubusercontent.com/dicodingacademy/a565-webtools-labs/099-shared-files/proyek-awal/DATA.json',
-    );
+    const fetchRecords = await fetch('/data/DATA.json')
     const responseRecords = await fetchRecords.json();
 
     console.log(responseRecords);
