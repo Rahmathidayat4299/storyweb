@@ -27,10 +27,36 @@ const Add = {
     const formData = this._getFormData();
 
     if (this._validateFormData({ ...formData })) {
-      console.log('formData');
-      console.log(formData);
-
-      // this._goToDashboardPage();
+      fetch('/data/DATA.json', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          error: false,
+          message: 'Stories fetched successfully',
+          listStory: [
+            {
+              id: 'story-FvU4u0Vp2S3PMsFg',
+              name: 'Faisal Sulaiman',
+              description:
+                'In rhoncus lorem nec ex egestas mollis vel a mauris. Pellentesque vel diam at neque hendrerit bibendum. Quisque egestas, dolor eu semper dapibus, turpis neque.',
+              photoUrl: 'https://source.unsplash.com/1200x700/?nature',
+              createdAt: '2022-01-08T06:34:18.598Z',
+            },
+          ],
+        }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          console.log('Data has been posted');
+          // this._goToDashboardPage();
+        })
+        .catch((error) => {
+          console.error('There was a problem with the fetch operation:', error);
+        });
     }
   },
 

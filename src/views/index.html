@@ -9,7 +9,8 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+      <nav-app brandName="<%= brandName %>"></nav-app>
+      <!-- <nav class="navbar navbar-expand-md navbar-dark bg-primary">
         <div class="container">
           <span class="navbar-brand"><%= brandName %></span>
       
@@ -30,7 +31,7 @@
             <%= navLinks %>
           </div>
         </div>
-      </nav>
+      </nav> -->
       
     </header>
 
@@ -110,8 +111,10 @@
     </main>
 
     <footer>
-      <div class="main-footer bg-dark">
-        <div class="container px-3 py-4"><%= footerContent %></div>
+      <div class="main-footer bg-info">
+        <div class="container px-3 py-4">
+          <footer-app></footer-app>
+        </div>
       </div>
     </footer>
 

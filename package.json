@@ -16,7 +16,7 @@
     "autoprefixer": "10.4.13",
     "babel-loader": "9.1.0",
     "clean-webpack-plugin": "4.0.0",
-    "copy-webpack-plugin": "11.0.0",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.2",
     "html-webpack-plugin": "5.5.0",
     "postcss-loader": "7.0.1",
@@ -33,6 +33,7 @@
     "@popperjs/core": "2.11.6",
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.2.3",
-    "bootstrap-icons": "^1.10.3"
+    "bootstrap-icons": "^1.10.3",
+    "lit": "^2.7.4"
   }
 }
