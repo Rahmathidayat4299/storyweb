@@ -5,34 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title><%= htmlWebpackPlugin.options.title %> | Money Tracker App</title>
+    <title><%= htmlWebpackPlugin.options.title %> | Story App</title>
   </head>
   <body>
     <header>
-      <nav-app brandName="<%= brandName %>"></nav-app>
-      <!-- <nav class="navbar navbar-expand-md navbar-dark bg-primary">
-        <div class="container">
-          <span class="navbar-brand"><%= brandName %></span>
-      
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <%= navLinks %>
-          </div>
-        </div>
-      </nav> -->
-      
+      <nav-app brandName="<%= brandName %>"></nav-app>   
     </header>
 
     <main>
@@ -41,7 +18,7 @@
           <h1 class="mb-3">Dashboard</h1>
 
           <!-- Card Information -->
-          <div class="row mb-5 g-3">
+          <div class="row mb-8 g-6">
             <div class="col-12 col-sm-6 col-lg-4">
               <div class="card h-100 bg-primary text-bg-primary bg-gradient">
                 <div class="card-body">
@@ -53,7 +30,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-sm-6 col-lg-4">
+            <!-- <div class="col-12 col-sm-6 col-lg-4">
               <div class="card h-100 bg-success text-bg-success bg-gradient">
                 <div class="card-body">
                   <h1 class="card-title fs-2">
@@ -63,8 +40,8 @@
                   <p class="card-text"></p>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-sm-12 col-lg-4">
+            </div> -->
+            <!-- <div class="col-12 col-sm-12 col-lg-4">
               <div class="card h-100 bg-warning text-bg-warning bg-gradient">
                 <div class="card-body">
                   <h1 class="card-title fs-2">
@@ -74,7 +51,7 @@
                   <p class="card-text"></p>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <!-- Records -->
@@ -118,57 +95,16 @@
       </div>
     </footer>
 
-    <div
+    
+    
+    <modal-transaction
+      title="Rincian Transaksi"
       class="modal fade"
       id="recordDetailModal"
       data-bs-backdrop="static"
       data-bs-keyboard="false"
       tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Rincian Story</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <img src="" id="imgDetailRecord" class="img-fluid" alt="photo of story" />
-            </div>
-
-            <h2>Rincian Story</h2>
-            <table>
-              <tbody>
-                <tr>
-                  <td class="fw-bold">Nama</td>
-                  <td class="fw-bold ms-3 me-1 d-inline-block">:</td>
-                  <td id="nameDetailRecord"></td>
-                </tr>
-                <tr>
-                  <td class="fw-bold">Tanggal</td>
-                  <td class="fw-bold ms-3 me-1 d-inline-block">:</td>
-                  <td id="dateDetailRecord"></td>
-                </tr>
-                <tr>
-                  <td class="fw-bold">Catatan</td>
-                  <td class="fw-bold ms-3 me-1 d-inline-block">:</td>
-                  <td id="noteDetailRecord"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    ></modal-transaction>
+    
   </body>
 </html>
