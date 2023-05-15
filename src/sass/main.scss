@@ -1,1 +1,103 @@
 @use 'vendors';
+// Import file dependencies
+@use "variables";
+@use "mixins";
+
+// Global styles
+@import url("https://unpkg.com/aos@next/dist/aos.css");
+
+// Body styles
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+// Header styles
+header {
+  background-color: variables.$primary-color;
+  color: variables.$text-color;
+
+  nav-app {
+    // Styles for nav-app component
+    // ...
+  }
+}
+
+// Main content styles
+main {
+  .main-content {
+    .container {
+      padding: variables.$container-padding;
+    }
+
+    h1 {
+      font-size: variables.$heading1-size;
+      margin-bottom: variables.$heading1-margin-bottom;
+    }
+
+    // Card Information styles
+    .card {
+      background-color: variables.$primary-color;
+      color: variables.$text-color;
+    margin-bottom: variables.$card-list-margin;
+      .card-body {
+        margin-bottom: variables.$card-list-margin;
+      }
+    }
+
+ 
+    .d-flex {
+      @include mixins.flex-center;
+    }
+
+    h1 {
+ 
+    }
+
+    .btn {
+      &.btn-primary {
+        
+      }
+    }
+
+ 
+    .container {
+    
+
+      .row-cols-1 {
+        
+      }
+
+      .row-cols-md-2 {
+   
+      }
+
+      .row-cols-lg-4 {
+      
+      }
+    }
+  }
+}
+
+// Footer styles
+footer {
+  .main-footer {
+    background-color: variables.$info-color;
+    color: variables.$text-color;
+
+    .container {
+      padding: variables.$container-padding;
+
+      footer-app {
+       
+      }
+    }
+  }
+}
+
+
+modal-transaction {
+
+}
+

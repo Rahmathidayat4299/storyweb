@@ -6,6 +6,10 @@ class FooterApp extends LitWithoutShadowDom {
     return html`
       <p class="text-center text-white mb-0">
         Made with ❤ by Rahmat Hidayat
+        ©2023
+      </p>
+      <p class="text-center text-white mb-0">
+      Story App adalah aplikasi cerita yang dibuat untuk submission dicoding
       </p>
     `;
   }
